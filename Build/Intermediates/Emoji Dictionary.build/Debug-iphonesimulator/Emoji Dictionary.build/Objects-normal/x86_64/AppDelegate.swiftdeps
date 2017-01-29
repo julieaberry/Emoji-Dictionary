@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C16Emoji_Dictionary11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDidBecomeActive"
-- "applicationWillTerminate"
 - "window"
+- "applicationDidBecomeActive"
+- "applicationDidEnterBackground"
 - "application"
 - "applicationWillEnterForeground"
 - "applicationWillResignActive"
-- "applicationDidEnterBackground"
+- "applicationWillTerminate"
 depends-top-level:
-- "UIResponder"
-- "UIApplicationDelegate"
-- !private "BooleanLiteralType"
-- "UIApplication"
 - "UIWindow"
 - "Bool"
 - "UIApplicationLaunchOptionsKey"
 - "AppDelegate"
+- "UIResponder"
+- "UIApplicationDelegate"
+- !private "BooleanLiteralType"
+- "UIApplication"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]

@@ -1,6 +1,7 @@
 version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
 options: "afbd10c3066cb9423bd767bf35d6c0c6"
-build_time: [539036530, 821872000]
+build_time: [539045862, 917547000]
 inputs:
-  "/Users/julieberry/Desktop/Udemy/Emoji Dictionary/Emoji Dictionary/ViewController.swift": [539036527, 0]
+  "/Users/julieberry/Desktop/Udemy/Emoji Dictionary/Emoji Dictionary/DefinitionViewController.swift": [539045705, 0]
+  "/Users/julieberry/Desktop/Udemy/Emoji Dictionary/Emoji Dictionary/ViewController.swift": [539045856, 0]
   "/Users/julieberry/Desktop/Udemy/Emoji Dictionary/Emoji Dictionary/AppDelegate.swift": [539031388, 0]

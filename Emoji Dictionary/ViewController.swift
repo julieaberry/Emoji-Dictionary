@@ -12,8 +12,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     
-    var emojis = ["😀", "☺️", "😍", "🤡", "🤑", "😱","🤧", "😵"]
+    var emoji = "NO EMOJI"
     
+    
+    var emojis = ["😀", "😇", "😍", "🤡", "🤑", "😱","🤧", "😴"]
+    // moveSegue
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +40,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    // this is what happens when a row is tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // removes the default gray highlight
+        tableView.deselectRow(at: indexPath, animated: true)
+        // passes whatever emoji is tapped to the next view controller
+        let emoji = emojis[indexPath.row]
+        // whatever is tapped will open the next view controller
+        performSegue(withIdentifier: "moveSegue", sender: emoji)
+    }
     
-    
+    // this gets sender from the didSelectRowAt function
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let defVC = segue.destination as! DefinitionViewController
+        defVC.emoji = sender as! String
+    }
     
 
     override func didReceiveMemoryWarning() {
