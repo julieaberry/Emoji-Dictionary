@@ -142,9 +142,10 @@ SWIFT_CLASS("_TtC16Emoji_Dictionary11AppDelegate")
 
 SWIFT_CLASS("_TtC16Emoji_Dictionary24DefinitionViewController")
 @interface DefinitionViewController : UIViewController
-@property (nonatomic, copy) NSString * _Nonnull emoji;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified emojiLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified definitionLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified categoryLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified birthYearLabel;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -158,8 +159,6 @@ SWIFT_CLASS("_TtC16Emoji_Dictionary24DefinitionViewController")
 SWIFT_CLASS("_TtC16Emoji_Dictionary14ViewController")
 @interface ViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
-@property (nonatomic, copy) NSString * _Nonnull emoji;
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull emojis;
 - (void)viewDidLoad;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;

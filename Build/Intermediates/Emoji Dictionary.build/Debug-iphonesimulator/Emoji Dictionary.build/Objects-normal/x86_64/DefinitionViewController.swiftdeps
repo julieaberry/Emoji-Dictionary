@@ -6,62 +6,77 @@ provides-nominal:
 provides-member:
 - ["C16Emoji_Dictionary24DefinitionViewController", ""]
 provides-dynamic-lookup:
-- "definitionLabel"
-- "emojiLabel"
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
-- "emoji"
+- "emojiLabel"
+- "birthYearLabel"
+- "viewDidLoad"
+- "categoryLabel"
+- "definitionLabel"
 depends-top-level:
-- "DefinitionViewController"
-- "StringLiteralType"
 - "UILabel"
+- "DefinitionViewController"
 - "UIViewController"
-- !private "UnicodeScalarType"
 - "AssignmentPrecedence"
-- !private "=="
+- "Emoji"
 depends-member:
+- ["Ps9AnyObject", "Emoji"]
+- !private ["Ps9AnyObject", "birthYear"]
+- ["Ps9AnyObject", "birthYearLabel"]
+- !private ["Ps9AnyObject", "category"]
+- ["Ps9AnyObject", "categoryLabel"]
+- !private ["Ps9AnyObject", "definition"]
 - ["Ps9AnyObject", "definitionLabel"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - ["Ps9AnyObject", "emoji"]
 - ["Ps9AnyObject", "emojiLabel"]
 - ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "stringEmoji"]
 - !private ["Ps9AnyObject", "text"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
-- !private ["Sb", "_getBuiltinLogicValue"]
-- ["Sb", "deinit"]
+- !private ["Sb", "deinit"]
 - !private ["PSo15CALayerDelegate", "text"]
+- ["Ps7CVarArg", "Emoji"]
+- ["Ps7CVarArg", "birthYearLabel"]
+- ["Ps7CVarArg", "categoryLabel"]
 - ["Ps7CVarArg", "definitionLabel"]
 - ["Ps7CVarArg", "didReceiveMemoryWarning"]
 - ["Ps7CVarArg", "emoji"]
 - ["Ps7CVarArg", "emojiLabel"]
-- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "text"]
 - ["Ps7CVarArg", "viewDidLoad"]
 - ["Ps7CVarArg", ""]
-- ["Ps10Comparable", "init"]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "Emoji"]
+- ["Ps28CustomDebugStringConvertible", "birthYearLabel"]
+- ["Ps28CustomDebugStringConvertible", "categoryLabel"]
 - ["Ps28CustomDebugStringConvertible", "definitionLabel"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - ["Ps28CustomDebugStringConvertible", "emoji"]
 - ["Ps28CustomDebugStringConvertible", "emojiLabel"]
-- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
-- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
-- ["Ps29CustomPlaygroundQuickLookable", "init"]
-- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
-- ["Ps17CustomReflectable", "init"]
-- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- ["Ps23CustomStringConvertible", "Emoji"]
+- ["Ps23CustomStringConvertible", "birthYearLabel"]
+- ["Ps23CustomStringConvertible", "categoryLabel"]
 - ["Ps23CustomStringConvertible", "definitionLabel"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - ["Ps23CustomStringConvertible", "emoji"]
 - ["Ps23CustomStringConvertible", "emojiLabel"]
-- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "text"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
+- ["C16Emoji_Dictionary24DefinitionViewController", "Emoji"]
 - ["C16Emoji_Dictionary24DefinitionViewController", "UILabel"]
+- ["C16Emoji_Dictionary24DefinitionViewController", "birthYearLabel"]
+- ["C16Emoji_Dictionary24DefinitionViewController", "categoryLabel"]
 - ["C16Emoji_Dictionary24DefinitionViewController", "definitionLabel"]
 - ["C16Emoji_Dictionary24DefinitionViewController", "deinit"]
 - ["C16Emoji_Dictionary24DefinitionViewController", "didReceiveMemoryWarning"]
@@ -69,43 +84,64 @@ depends-member:
 - ["C16Emoji_Dictionary24DefinitionViewController", "emojiLabel"]
 - ["C16Emoji_Dictionary24DefinitionViewController", "init"]
 - ["C16Emoji_Dictionary24DefinitionViewController", "viewDidLoad"]
-- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Sd", "deinit"]
+- !private ["C16Emoji_Dictionary5Emoji", "birthYear"]
+- !private ["C16Emoji_Dictionary5Emoji", "category"]
+- !private ["C16Emoji_Dictionary5Emoji", "definition"]
+- ["C16Emoji_Dictionary5Emoji", "deinit"]
+- ["C16Emoji_Dictionary5Emoji", "init"]
+- !private ["C16Emoji_Dictionary5Emoji", "stringEmoji"]
+- ["Ps9Equatable", "Emoji"]
+- ["Ps9Equatable", "birthYearLabel"]
+- ["Ps9Equatable", "categoryLabel"]
 - ["Ps9Equatable", "definitionLabel"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
 - ["Ps9Equatable", "emoji"]
 - ["Ps9Equatable", "emojiLabel"]
-- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "text"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
-- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
-- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
-- ["Ps32ExpressibleByStringInterpolation", "init"]
-- ["Ps26ExpressibleByStringLiteral", "init"]
-- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
-- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Sf", "deinit"]
+- ["Ps8Hashable", "Emoji"]
+- ["Ps8Hashable", "birthYearLabel"]
+- ["Ps8Hashable", "categoryLabel"]
 - ["Ps8Hashable", "definitionLabel"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
 - ["Ps8Hashable", "emoji"]
 - ["Ps8Hashable", "emojiLabel"]
-- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "text"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
 - ["SQ", "deinit"]
-- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
-- ["Ps25LosslessStringConvertible", "init"]
-- ["Ps10MirrorPath", "init"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
 - ["CSo7NSCoder", "deinit"]
+- ["PSo8NSCoding", "Emoji"]
+- ["PSo8NSCoding", "birthYearLabel"]
+- ["PSo8NSCoding", "categoryLabel"]
 - ["PSo8NSCoding", "definitionLabel"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - ["PSo8NSCoding", "emoji"]
 - ["PSo8NSCoding", "emojiLabel"]
-- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
-- ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "init"]
+- ["PSo26NSExtensionRequestHandling", "Emoji"]
+- ["PSo26NSExtensionRequestHandling", "birthYearLabel"]
+- ["PSo26NSExtensionRequestHandling", "categoryLabel"]
 - ["PSo26NSExtensionRequestHandling", "definitionLabel"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "emoji"]
@@ -113,8 +149,11 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
-- ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Emoji"]
 - ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "birthYearLabel"]
+- ["CSo8NSObject", "categoryLabel"]
 - ["CSo8NSObject", "definitionLabel"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - ["CSo8NSObject", "emoji"]
@@ -122,23 +161,29 @@ depends-member:
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "text"]
 - ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "Emoji"]
+- ["PSo16NSObjectProtocol", "birthYearLabel"]
+- ["PSo16NSObjectProtocol", "categoryLabel"]
 - ["PSo16NSObjectProtocol", "definitionLabel"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - ["PSo16NSObjectProtocol", "emoji"]
 - ["PSo16NSObjectProtocol", "emojiLabel"]
-- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
-- ["PSo14NSSecureCoding", "init"]
-- ["CSo8NSString", "init"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
 - ["Sq", "deinit"]
 - ["SS", "deinit"]
-- ["SS", "init"]
-- ["Ps16TextOutputStream", "init"]
-- ["Ps20TextOutputStreamable", "init"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo12UIAppearance", "text"]
+- ["PSo21UIAppearanceContainer", "Emoji"]
+- ["PSo21UIAppearanceContainer", "birthYearLabel"]
+- ["PSo21UIAppearanceContainer", "categoryLabel"]
 - ["PSo21UIAppearanceContainer", "definitionLabel"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - ["PSo21UIAppearanceContainer", "emoji"]
@@ -147,6 +192,9 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "Emoji"]
+- ["PSo18UIContentContainer", "birthYearLabel"]
+- ["PSo18UIContentContainer", "categoryLabel"]
 - ["PSo18UIContentContainer", "definitionLabel"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "emoji"]
@@ -157,6 +205,9 @@ depends-member:
 - !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
 - !private ["PSo17UICoordinateSpace", "text"]
 - !private ["PSo13UIDynamicItem", "text"]
+- ["PSo18UIFocusEnvironment", "Emoji"]
+- ["PSo18UIFocusEnvironment", "birthYearLabel"]
+- ["PSo18UIFocusEnvironment", "categoryLabel"]
 - ["PSo18UIFocusEnvironment", "definitionLabel"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UIFocusEnvironment", "emoji"]
@@ -167,7 +218,10 @@ depends-member:
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo11UIFocusItem", "text"]
 - !private ["CSo7UILabel", "text"]
+- ["CSo11UIResponder", "Emoji"]
 - ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "birthYearLabel"]
+- ["CSo11UIResponder", "categoryLabel"]
 - ["CSo11UIResponder", "definitionLabel"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "emoji"]
@@ -175,6 +229,9 @@ depends-member:
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", "Emoji"]
+- ["PSo30UIResponderStandardEditActions", "birthYearLabel"]
+- ["PSo30UIResponderStandardEditActions", "categoryLabel"]
 - ["PSo30UIResponderStandardEditActions", "definitionLabel"]
 - ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
 - ["PSo30UIResponderStandardEditActions", "emoji"]
@@ -183,6 +240,9 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "text"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- ["PSo16UIStateRestoring", "Emoji"]
+- ["PSo16UIStateRestoring", "birthYearLabel"]
+- ["PSo16UIStateRestoring", "categoryLabel"]
 - ["PSo16UIStateRestoring", "definitionLabel"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "emoji"]
@@ -190,6 +250,9 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
+- ["PSo18UITraitEnvironment", "Emoji"]
+- ["PSo18UITraitEnvironment", "birthYearLabel"]
+- ["PSo18UITraitEnvironment", "categoryLabel"]
 - ["PSo18UITraitEnvironment", "definitionLabel"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UITraitEnvironment", "emoji"]
@@ -199,7 +262,10 @@ depends-member:
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "Emoji"]
 - ["CSo16UIViewController", "UILabel"]
+- ["CSo16UIViewController", "birthYearLabel"]
+- ["CSo16UIViewController", "categoryLabel"]
 - ["CSo16UIViewController", "definitionLabel"]
 - ["CSo16UIViewController", "deinit"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
@@ -208,58 +274,72 @@ depends-member:
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
-- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
-- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
-- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
-- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
-- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
-- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
-- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps9_Hashable", "Emoji"]
+- ["Ps9_Hashable", "birthYearLabel"]
+- ["Ps9_Hashable", "categoryLabel"]
 - ["Ps9_Hashable", "definitionLabel"]
 - ["Ps9_Hashable", "didReceiveMemoryWarning"]
 - ["Ps9_Hashable", "emoji"]
 - ["Ps9_Hashable", "emojiLabel"]
-- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "text"]
 - ["Ps9_Hashable", "viewDidLoad"]
 - ["Ps9_Hashable", ""]
-- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
 depends-nominal:
 - "Ps9AnyObject"
-- "Sb"
+- !private "Sb"
 - !private "PSo15CALayerDelegate"
 - "Ps7CVarArg"
-- "Ps10Comparable"
+- !private "Vs9Character"
+- !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
-- "Ps29CustomPlaygroundQuickLookable"
-- "Ps17CustomReflectable"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
 - "C16Emoji_Dictionary24DefinitionViewController"
+- !private "Sd"
+- "C16Emoji_Dictionary5Emoji"
 - "Ps9Equatable"
-- !private "Ps27ExpressibleByBooleanLiteral"
-- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
-- "Ps32ExpressibleByStringInterpolation"
-- "Ps26ExpressibleByStringLiteral"
-- "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Sf"
 - "Ps8Hashable"
 - "SQ"
-- "Ps25LosslessStringConvertible"
-- "Ps10MirrorPath"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
 - "CSo7NSCoder"
 - "PSo8NSCoding"
-- "PSo9NSCopying"
+- !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
-- "PSo16NSMutableCopying"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- "PSo14NSSecureCoding"
-- "CSo8NSString"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
 - "Sq"
 - "SS"
-- "Ps16TextOutputStream"
-- "Ps20TextOutputStreamable"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
@@ -276,15 +356,20 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
 - !private "Ps37_DefaultCustomPlaygroundQuickLookable"
-- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
-- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
-- "Ps34_ExpressibleByBuiltinStringLiteral"
-- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
-- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
-- "Ps35_HasCustomAnyHashableRepresentation"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
-- "Ps21_ObjectiveCBridgeable"
+- !private "Ps21_ObjectiveCBridgeable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
@@ -297,4 +382,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "63dd642e2ef016d8c0b84552e526523d"
+interface-hash: "929cc5281d735ef318aca3c756d7967d"

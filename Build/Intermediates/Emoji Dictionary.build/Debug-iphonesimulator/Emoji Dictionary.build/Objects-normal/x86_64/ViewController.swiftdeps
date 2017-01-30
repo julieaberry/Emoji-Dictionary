@@ -7,44 +7,46 @@ provides-member:
 - ["C16Emoji_Dictionary14ViewController", ""]
 provides-dynamic-lookup:
 - "prepare"
-- "emojis"
-- "didReceiveMemoryWarning"
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
-- "emoji"
 - "viewDidLoad"
+- "didReceiveMemoryWarning"
 depends-top-level:
+- "ViewController"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- !private "DefinitionViewController"
+- !private "ExtendedGraphemeClusterType"
+- !private "UnicodeScalarType"
+- "UITableViewCell"
 - "UITableView"
-- "StringLiteralType"
+- "IndexPath"
+- !private "BooleanLiteralType"
+- "Emoji"
+- "UITableViewDataSource"
 - "UITableViewDelegate"
 - "UIStoryboardSegue"
-- "UITableViewDataSource"
-- !private "BooleanLiteralType"
-- !private "DefinitionViewController"
-- !private "String"
-- "Array"
-- "UITableViewCell"
-- "UnicodeScalarType"
 - "UIViewController"
-- "IndexPath"
-- "ViewController"
-- "CastingPrecedence"
-- "AssignmentPrecedence"
 - "Int"
 depends-member:
+- !private ["Ps9AnyObject", "Emoji"]
 - !private ["Ps9AnyObject", "UITableViewCell"]
+- !private ["Ps9AnyObject", "birthYear"]
+- !private ["Ps9AnyObject", "category"]
 - !private ["Ps9AnyObject", "dataSource"]
+- !private ["Ps9AnyObject", "definition"]
 - !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "deselectRow"]
 - !private ["Ps9AnyObject", "destination"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
-- ["Ps9AnyObject", "emoji"]
+- !private ["Ps9AnyObject", "emoji"]
 - ["Ps9AnyObject", "emojis"]
 - ["Ps9AnyObject", "indexPathForPreferredFocusedView"]
 - ["Ps9AnyObject", "indexPathForPreferredFocusedViewInTableView"]
-- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "makeEmojiArray"]
 - ["Ps9AnyObject", "numberOfSections"]
 - ["Ps9AnyObject", "numberOfSectionsInTableView"]
 - !private ["Ps9AnyObject", "performSegue"]
@@ -63,6 +65,7 @@ depends-member:
 - ["Ps9AnyObject", "scrollViewWillEndDragging"]
 - ["Ps9AnyObject", "sectionIndexTitles"]
 - ["Ps9AnyObject", "sectionIndexTitlesForTableView"]
+- !private ["Ps9AnyObject", "stringEmoji"]
 - ["Ps9AnyObject", "tableView"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "textLabel"]
@@ -70,7 +73,6 @@ depends-member:
 - ["Ps9AnyObject", "viewForZooming"]
 - ["Ps9AnyObject", "viewForZoomingInScrollView"]
 - ["Ps9AnyObject", ""]
-- ["Sa", "Element"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "IndexDistance"]
 - !private ["Sa", "SubSequence"]
@@ -78,7 +80,6 @@ depends-member:
 - !private ["Sa", "count"]
 - ["Sa", "deinit"]
 - !private ["Sa", "subscript"]
-- ["Ps23BidirectionalCollection", "Element"]
 - !private ["Ps23BidirectionalCollection", "Index"]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
 - !private ["Ps23BidirectionalCollection", "Indices"]
@@ -88,7 +89,6 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "count"]
 - !private ["Ps23BidirectionalCollection", "row"]
 - !private ["Ps23BidirectionalCollection", "subscript"]
-- ["Ps22BidirectionalIndexable", "Element"]
 - !private ["Ps22BidirectionalIndexable", "Index"]
 - !private ["Ps22BidirectionalIndexable", "IndexDistance"]
 - !private ["Ps22BidirectionalIndexable", "Indices"]
@@ -114,7 +114,7 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "init"]
 - !private ["PSo15CALayerDelegate", "text"]
 - !private ["PSo15CALayerDelegate", "textLabel"]
-- ["Ps7CVarArg", "Element"]
+- !private ["Ps7CVarArg", "Emoji"]
 - !private ["Ps7CVarArg", "Index"]
 - !private ["Ps7CVarArg", "IndexDistance"]
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
@@ -129,11 +129,12 @@ depends-member:
 - !private ["Ps7CVarArg", "deselectRow"]
 - !private ["Ps7CVarArg", "destination"]
 - ["Ps7CVarArg", "didReceiveMemoryWarning"]
-- ["Ps7CVarArg", "emoji"]
+- !private ["Ps7CVarArg", "emoji"]
 - ["Ps7CVarArg", "emojis"]
 - ["Ps7CVarArg", "indexPathForPreferredFocusedView"]
 - ["Ps7CVarArg", "indexPathForPreferredFocusedViewInTableView"]
-- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "makeEmojiArray"]
 - ["Ps7CVarArg", "numberOfSections"]
 - ["Ps7CVarArg", "numberOfSectionsInTableView"]
 - !private ["Ps7CVarArg", "performSegue"]
@@ -160,7 +161,6 @@ depends-member:
 - ["Ps7CVarArg", "viewForZooming"]
 - ["Ps7CVarArg", "viewForZoomingInScrollView"]
 - ["Ps7CVarArg", ""]
-- ["Ps10Collection", "Element"]
 - !private ["Ps10Collection", "Index"]
 - !private ["Ps10Collection", "IndexDistance"]
 - !private ["Ps10Collection", "Indices"]
@@ -173,9 +173,9 @@ depends-member:
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "Stride"]
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
-- ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "init"]
 - !private ["Ps10Comparable", "row"]
-- ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "Emoji"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
@@ -187,11 +187,12 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "deselectRow"]
 - !private ["Ps28CustomDebugStringConvertible", "destination"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
-- ["Ps28CustomDebugStringConvertible", "emoji"]
+- !private ["Ps28CustomDebugStringConvertible", "emoji"]
 - ["Ps28CustomDebugStringConvertible", "emojis"]
 - ["Ps28CustomDebugStringConvertible", "indexPathForPreferredFocusedView"]
 - ["Ps28CustomDebugStringConvertible", "indexPathForPreferredFocusedViewInTableView"]
-- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "makeEmojiArray"]
 - ["Ps28CustomDebugStringConvertible", "numberOfSections"]
 - ["Ps28CustomDebugStringConvertible", "numberOfSectionsInTableView"]
 - !private ["Ps28CustomDebugStringConvertible", "performSegue"]
@@ -222,8 +223,7 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "IntegerLiteralType"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "Stride"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_DisabledRangeIndex"]
-- ["Ps29CustomPlaygroundQuickLookable", "init"]
-- ["Ps17CustomReflectable", "Element"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps17CustomReflectable", "Index"]
 - !private ["Ps17CustomReflectable", "IndexDistance"]
 - !private ["Ps17CustomReflectable", "IntegerLiteralType"]
@@ -232,10 +232,10 @@ depends-member:
 - !private ["Ps17CustomReflectable", "_DisabledRangeIndex"]
 - !private ["Ps17CustomReflectable", "_Element"]
 - !private ["Ps17CustomReflectable", "count"]
-- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "row"]
 - !private ["Ps17CustomReflectable", "subscript"]
-- ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "Emoji"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IndexDistance"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
@@ -250,11 +250,12 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "deselectRow"]
 - !private ["Ps23CustomStringConvertible", "destination"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
-- ["Ps23CustomStringConvertible", "emoji"]
+- !private ["Ps23CustomStringConvertible", "emoji"]
 - ["Ps23CustomStringConvertible", "emojis"]
 - ["Ps23CustomStringConvertible", "indexPathForPreferredFocusedView"]
 - ["Ps23CustomStringConvertible", "indexPathForPreferredFocusedViewInTableView"]
-- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "makeEmojiArray"]
 - ["Ps23CustomStringConvertible", "numberOfSections"]
 - ["Ps23CustomStringConvertible", "numberOfSectionsInTableView"]
 - !private ["Ps23CustomStringConvertible", "performSegue"]
@@ -294,6 +295,13 @@ depends-member:
 - !private ["Vs26DefaultRandomAccessIndices", "_Element"]
 - ["C16Emoji_Dictionary24DefinitionViewController", "deinit"]
 - !private ["C16Emoji_Dictionary24DefinitionViewController", "emoji"]
+- !private ["C16Emoji_Dictionary5Emoji", "birthYear"]
+- !private ["C16Emoji_Dictionary5Emoji", "category"]
+- !private ["C16Emoji_Dictionary5Emoji", "definition"]
+- ["C16Emoji_Dictionary5Emoji", "deinit"]
+- !private ["C16Emoji_Dictionary5Emoji", "init"]
+- !private ["C16Emoji_Dictionary5Emoji", "stringEmoji"]
+- !private ["Ps9Equatable", "Emoji"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "UITableViewCell"]
@@ -303,11 +311,12 @@ depends-member:
 - !private ["Ps9Equatable", "deselectRow"]
 - !private ["Ps9Equatable", "destination"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
-- ["Ps9Equatable", "emoji"]
+- !private ["Ps9Equatable", "emoji"]
 - ["Ps9Equatable", "emojis"]
 - ["Ps9Equatable", "indexPathForPreferredFocusedView"]
 - ["Ps9Equatable", "indexPathForPreferredFocusedViewInTableView"]
-- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "makeEmojiArray"]
 - ["Ps9Equatable", "numberOfSections"]
 - ["Ps9Equatable", "numberOfSectionsInTableView"]
 - !private ["Ps9Equatable", "performSegue"]
@@ -334,7 +343,6 @@ depends-member:
 - ["Ps9Equatable", "viewForZooming"]
 - ["Ps9Equatable", "viewForZoomingInScrollView"]
 - ["Ps9Equatable", ""]
-- ["Ps25ExpressibleByArrayLiteral", "Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Index"]
 - !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
 - !private ["Ps25ExpressibleByArrayLiteral", "SubSequence"]
@@ -342,13 +350,14 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "count"]
 - !private ["Ps25ExpressibleByArrayLiteral", "row"]
 - !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
-- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "_DisabledRangeIndex"]
-- ["Ps32ExpressibleByStringInterpolation", "init"]
-- ["Ps26ExpressibleByStringLiteral", "init"]
-- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "Emoji"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "UITableViewCell"]
@@ -358,11 +367,12 @@ depends-member:
 - !private ["Ps8Hashable", "deselectRow"]
 - !private ["Ps8Hashable", "destination"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
-- ["Ps8Hashable", "emoji"]
+- !private ["Ps8Hashable", "emoji"]
 - ["Ps8Hashable", "emojis"]
 - ["Ps8Hashable", "indexPathForPreferredFocusedView"]
 - ["Ps8Hashable", "indexPathForPreferredFocusedViewInTableView"]
-- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "makeEmojiArray"]
 - ["Ps8Hashable", "numberOfSections"]
 - ["Ps8Hashable", "numberOfSectionsInTableView"]
 - !private ["Ps8Hashable", "performSegue"]
@@ -392,7 +402,6 @@ depends-member:
 - ["SQ", "deinit"]
 - ["V10Foundation9IndexPath", "deinit"]
 - !private ["V10Foundation9IndexPath", "row"]
-- ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "IndexDistance"]
 - !private ["Ps9Indexable", "Indices"]
@@ -402,7 +411,6 @@ depends-member:
 - !private ["Ps9Indexable", "count"]
 - !private ["Ps9Indexable", "row"]
 - !private ["Ps9Indexable", "subscript"]
-- ["Ps13IndexableBase", "Element"]
 - !private ["Ps13IndexableBase", "Index"]
 - !private ["Ps13IndexableBase", "IndexDistance"]
 - !private ["Ps13IndexableBase", "Indices"]
@@ -424,12 +432,11 @@ depends-member:
 - !private ["Ps17IntegerArithmetic", "Stride"]
 - !private ["Ps17IntegerArithmetic", "_DisabledRangeIndex"]
 - !private ["Ps16IteratorProtocol", "Element"]
-- ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps25LosslessStringConvertible", "init"]
 - !private ["Ps10MirrorPath", "IntegerLiteralType"]
 - !private ["Ps10MirrorPath", "Stride"]
 - !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
-- ["Ps10MirrorPath", "init"]
-- ["Ps17MutableCollection", "Element"]
+- !private ["Ps10MirrorPath", "init"]
 - !private ["Ps17MutableCollection", "Index"]
 - !private ["Ps17MutableCollection", "IndexDistance"]
 - !private ["Ps17MutableCollection", "SubSequence"]
@@ -437,7 +444,6 @@ depends-member:
 - !private ["Ps17MutableCollection", "count"]
 - !private ["Ps17MutableCollection", "row"]
 - !private ["Ps17MutableCollection", "subscript"]
-- ["Ps16MutableIndexable", "Element"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "IndexDistance"]
 - !private ["Ps16MutableIndexable", "SubSequence"]
@@ -446,16 +452,18 @@ depends-member:
 - !private ["Ps16MutableIndexable", "row"]
 - !private ["Ps16MutableIndexable", "subscript"]
 - ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "Emoji"]
 - !private ["PSo8NSCoding", "UITableViewCell"]
 - !private ["PSo8NSCoding", "dataSource"]
 - !private ["PSo8NSCoding", "delegate"]
 - !private ["PSo8NSCoding", "deselectRow"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
-- ["PSo8NSCoding", "emoji"]
+- !private ["PSo8NSCoding", "emoji"]
 - ["PSo8NSCoding", "emojis"]
 - ["PSo8NSCoding", "indexPathForPreferredFocusedView"]
 - ["PSo8NSCoding", "indexPathForPreferredFocusedViewInTableView"]
-- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "makeEmojiArray"]
 - ["PSo8NSCoding", "numberOfSections"]
 - ["PSo8NSCoding", "numberOfSectionsInTableView"]
 - !private ["PSo8NSCoding", "performSegue"]
@@ -481,14 +489,16 @@ depends-member:
 - ["PSo8NSCoding", "viewForZooming"]
 - ["PSo8NSCoding", "viewForZoomingInScrollView"]
 - ["PSo8NSCoding", ""]
-- ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "Emoji"]
 - !private ["PSo26NSExtensionRequestHandling", "UITableViewCell"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
-- ["PSo26NSExtensionRequestHandling", "emoji"]
+- !private ["PSo26NSExtensionRequestHandling", "emoji"]
 - ["PSo26NSExtensionRequestHandling", "emojis"]
 - ["PSo26NSExtensionRequestHandling", "indexPathForPreferredFocusedView"]
 - ["PSo26NSExtensionRequestHandling", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "makeEmojiArray"]
 - ["PSo26NSExtensionRequestHandling", "numberOfSections"]
 - ["PSo26NSExtensionRequestHandling", "numberOfSectionsInTableView"]
 - !private ["PSo26NSExtensionRequestHandling", "performSegue"]
@@ -512,11 +522,11 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "viewForZooming"]
 - ["PSo26NSExtensionRequestHandling", "viewForZoomingInScrollView"]
 - ["PSo26NSExtensionRequestHandling", ""]
-- ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "init"]
 - !private ["CSo8NSObject", "DefinitionViewController"]
+- ["CSo8NSObject", "Emoji"]
 - ["CSo8NSObject", "IndexPath"]
 - ["CSo8NSObject", "Int"]
-- !private ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIStoryboardSegue"]
 - ["CSo8NSObject", "UITableView"]
 - ["CSo8NSObject", "UITableViewCell"]
@@ -525,11 +535,12 @@ depends-member:
 - !private ["CSo8NSObject", "deselectRow"]
 - !private ["CSo8NSObject", "destination"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
-- ["CSo8NSObject", "emoji"]
+- !private ["CSo8NSObject", "emoji"]
 - ["CSo8NSObject", "emojis"]
 - ["CSo8NSObject", "indexPathForPreferredFocusedView"]
 - ["CSo8NSObject", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "makeEmojiArray"]
 - ["CSo8NSObject", "numberOfSections"]
 - ["CSo8NSObject", "numberOfSectionsInTableView"]
 - !private ["CSo8NSObject", "performSegue"]
@@ -554,17 +565,19 @@ depends-member:
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewForZooming"]
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
+- !private ["PSo16NSObjectProtocol", "Emoji"]
 - !private ["PSo16NSObjectProtocol", "UITableViewCell"]
 - !private ["PSo16NSObjectProtocol", "dataSource"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "deselectRow"]
 - !private ["PSo16NSObjectProtocol", "destination"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
-- ["PSo16NSObjectProtocol", "emoji"]
+- !private ["PSo16NSObjectProtocol", "emoji"]
 - ["PSo16NSObjectProtocol", "emojis"]
 - ["PSo16NSObjectProtocol", "indexPathForPreferredFocusedView"]
 - ["PSo16NSObjectProtocol", "indexPathForPreferredFocusedViewInTableView"]
-- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "makeEmojiArray"]
 - ["PSo16NSObjectProtocol", "numberOfSections"]
 - ["PSo16NSObjectProtocol", "numberOfSectionsInTableView"]
 - !private ["PSo16NSObjectProtocol", "performSegue"]
@@ -590,10 +603,9 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewForZooming"]
 - ["PSo16NSObjectProtocol", "viewForZoomingInScrollView"]
 - ["PSo16NSObjectProtocol", ""]
-- ["PSo14NSSecureCoding", "init"]
-- ["CSo8NSString", "init"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
 - ["Sq", "deinit"]
-- ["Ps22RandomAccessCollection", "Element"]
 - !private ["Ps22RandomAccessCollection", "Index"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
 - !private ["Ps22RandomAccessCollection", "Indices"]
@@ -603,7 +615,6 @@ depends-member:
 - !private ["Ps22RandomAccessCollection", "count"]
 - !private ["Ps22RandomAccessCollection", "row"]
 - !private ["Ps22RandomAccessCollection", "subscript"]
-- ["Ps21RandomAccessIndexable", "Element"]
 - !private ["Ps21RandomAccessIndexable", "Index"]
 - !private ["Ps21RandomAccessIndexable", "IndexDistance"]
 - !private ["Ps21RandomAccessIndexable", "Indices"]
@@ -619,14 +630,12 @@ depends-member:
 - !private ["Vs17RandomAccessSlice", "Iterator"]
 - !private ["Vs17RandomAccessSlice", "SubSequence"]
 - !private ["Vs17RandomAccessSlice", "_Element"]
-- ["Ps26RangeReplaceableCollection", "Element"]
 - !private ["Ps26RangeReplaceableCollection", "Index"]
 - !private ["Ps26RangeReplaceableCollection", "IndexDistance"]
 - !private ["Ps26RangeReplaceableCollection", "SubSequence"]
 - !private ["Ps26RangeReplaceableCollection", "_Element"]
 - !private ["Ps26RangeReplaceableCollection", "count"]
 - !private ["Ps26RangeReplaceableCollection", "subscript"]
-- ["Ps25RangeReplaceableIndexable", "Element"]
 - !private ["Ps25RangeReplaceableIndexable", "Index"]
 - !private ["Ps25RangeReplaceableIndexable", "IndexDistance"]
 - !private ["Ps25RangeReplaceableIndexable", "SubSequence"]
@@ -634,7 +643,7 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "count"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
 - !private ["P10Foundation20ReferenceConvertible", "row"]
-- ["Ps8Sequence", "Element"]
+- !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "Index"]
 - !private ["Ps8Sequence", "IndexDistance"]
 - !private ["Ps8Sequence", "Indices"]
@@ -658,9 +667,9 @@ depends-member:
 - !private ["Ps10Strideable", "Stride"]
 - !private ["Ps10Strideable", "_DisabledRangeIndex"]
 - ["SS", "deinit"]
-- ["SS", "init"]
-- ["Ps16TextOutputStream", "init"]
-- ["Ps20TextOutputStreamable", "init"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "dataSource"]
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
 - !private ["PSo29UIAccessibilityIdentification", "deselectRow"]
@@ -673,16 +682,18 @@ depends-member:
 - !private ["PSo12UIAppearance", "init"]
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "textLabel"]
+- !private ["PSo21UIAppearanceContainer", "Emoji"]
 - !private ["PSo21UIAppearanceContainer", "UITableViewCell"]
 - !private ["PSo21UIAppearanceContainer", "dataSource"]
 - !private ["PSo21UIAppearanceContainer", "delegate"]
 - !private ["PSo21UIAppearanceContainer", "deselectRow"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
-- ["PSo21UIAppearanceContainer", "emoji"]
+- !private ["PSo21UIAppearanceContainer", "emoji"]
 - ["PSo21UIAppearanceContainer", "emojis"]
 - ["PSo21UIAppearanceContainer", "indexPathForPreferredFocusedView"]
 - ["PSo21UIAppearanceContainer", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "makeEmojiArray"]
 - ["PSo21UIAppearanceContainer", "numberOfSections"]
 - ["PSo21UIAppearanceContainer", "numberOfSectionsInTableView"]
 - !private ["PSo21UIAppearanceContainer", "performSegue"]
@@ -708,13 +719,15 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "viewForZooming"]
 - ["PSo21UIAppearanceContainer", "viewForZoomingInScrollView"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "Emoji"]
 - !private ["PSo18UIContentContainer", "UITableViewCell"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
-- ["PSo18UIContentContainer", "emoji"]
+- !private ["PSo18UIContentContainer", "emoji"]
 - ["PSo18UIContentContainer", "emojis"]
 - ["PSo18UIContentContainer", "indexPathForPreferredFocusedView"]
 - ["PSo18UIContentContainer", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "makeEmojiArray"]
 - ["PSo18UIContentContainer", "numberOfSections"]
 - ["PSo18UIContentContainer", "numberOfSectionsInTableView"]
 - !private ["PSo18UIContentContainer", "performSegue"]
@@ -751,16 +764,18 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "init"]
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "textLabel"]
+- !private ["PSo18UIFocusEnvironment", "Emoji"]
 - !private ["PSo18UIFocusEnvironment", "UITableViewCell"]
 - !private ["PSo18UIFocusEnvironment", "dataSource"]
 - !private ["PSo18UIFocusEnvironment", "delegate"]
 - !private ["PSo18UIFocusEnvironment", "deselectRow"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
-- ["PSo18UIFocusEnvironment", "emoji"]
+- !private ["PSo18UIFocusEnvironment", "emoji"]
 - ["PSo18UIFocusEnvironment", "emojis"]
 - ["PSo18UIFocusEnvironment", "indexPathForPreferredFocusedView"]
 - ["PSo18UIFocusEnvironment", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "makeEmojiArray"]
 - ["PSo18UIFocusEnvironment", "numberOfSections"]
 - ["PSo18UIFocusEnvironment", "numberOfSectionsInTableView"]
 - !private ["PSo18UIFocusEnvironment", "performSegue"]
@@ -797,9 +812,9 @@ depends-member:
 - ["CSo7UILabel", "deinit"]
 - !private ["CSo7UILabel", "text"]
 - !private ["CSo11UIResponder", "DefinitionViewController"]
+- ["CSo11UIResponder", "Emoji"]
 - ["CSo11UIResponder", "IndexPath"]
 - ["CSo11UIResponder", "Int"]
-- !private ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIStoryboardSegue"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
@@ -807,11 +822,12 @@ depends-member:
 - !private ["CSo11UIResponder", "delegate"]
 - !private ["CSo11UIResponder", "deselectRow"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
-- ["CSo11UIResponder", "emoji"]
+- !private ["CSo11UIResponder", "emoji"]
 - ["CSo11UIResponder", "emojis"]
 - ["CSo11UIResponder", "indexPathForPreferredFocusedView"]
 - ["CSo11UIResponder", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "makeEmojiArray"]
 - ["CSo11UIResponder", "numberOfSections"]
 - ["CSo11UIResponder", "numberOfSectionsInTableView"]
 - !private ["CSo11UIResponder", "performSegue"]
@@ -836,16 +852,18 @@ depends-member:
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "viewForZooming"]
 - ["CSo11UIResponder", "viewForZoomingInScrollView"]
+- !private ["PSo30UIResponderStandardEditActions", "Emoji"]
 - !private ["PSo30UIResponderStandardEditActions", "UITableViewCell"]
 - !private ["PSo30UIResponderStandardEditActions", "dataSource"]
 - !private ["PSo30UIResponderStandardEditActions", "delegate"]
 - !private ["PSo30UIResponderStandardEditActions", "deselectRow"]
 - ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
-- ["PSo30UIResponderStandardEditActions", "emoji"]
+- !private ["PSo30UIResponderStandardEditActions", "emoji"]
 - ["PSo30UIResponderStandardEditActions", "emojis"]
 - ["PSo30UIResponderStandardEditActions", "indexPathForPreferredFocusedView"]
 - ["PSo30UIResponderStandardEditActions", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
+- ["PSo30UIResponderStandardEditActions", "makeEmojiArray"]
 - ["PSo30UIResponderStandardEditActions", "numberOfSections"]
 - ["PSo30UIResponderStandardEditActions", "numberOfSectionsInTableView"]
 - !private ["PSo30UIResponderStandardEditActions", "performSegue"]
@@ -874,10 +892,12 @@ depends-member:
 - !private ["CSo12UIScrollView", "dataSource"]
 - !private ["CSo12UIScrollView", "delegate"]
 - !private ["CSo12UIScrollView", "deselectRow"]
+- !private ["PSo20UIScrollViewDelegate", "Emoji"]
 - !private ["PSo20UIScrollViewDelegate", "UITableViewCell"]
 - !private ["PSo20UIScrollViewDelegate", "emojis"]
 - ["PSo20UIScrollViewDelegate", "indexPathForPreferredFocusedView"]
 - ["PSo20UIScrollViewDelegate", "indexPathForPreferredFocusedViewInTableView"]
+- !private ["PSo20UIScrollViewDelegate", "makeEmojiArray"]
 - ["PSo20UIScrollViewDelegate", "numberOfSections"]
 - ["PSo20UIScrollViewDelegate", "numberOfSectionsInTableView"]
 - !private ["PSo20UIScrollViewDelegate", "performSegue"]
@@ -899,13 +919,15 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "viewForZooming"]
 - ["PSo20UIScrollViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo20UIScrollViewDelegate", ""]
+- !private ["PSo16UIStateRestoring", "Emoji"]
 - !private ["PSo16UIStateRestoring", "UITableViewCell"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
-- ["PSo16UIStateRestoring", "emoji"]
+- !private ["PSo16UIStateRestoring", "emoji"]
 - ["PSo16UIStateRestoring", "emojis"]
 - ["PSo16UIStateRestoring", "indexPathForPreferredFocusedView"]
 - ["PSo16UIStateRestoring", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "makeEmojiArray"]
 - ["PSo16UIStateRestoring", "numberOfSections"]
 - ["PSo16UIStateRestoring", "numberOfSectionsInTableView"]
 - !private ["PSo16UIStateRestoring", "performSegue"]
@@ -938,10 +960,12 @@ depends-member:
 - ["CSo15UITableViewCell", "deinit"]
 - !private ["CSo15UITableViewCell", "init"]
 - !private ["CSo15UITableViewCell", "textLabel"]
+- !private ["PSo21UITableViewDataSource", "Emoji"]
 - !private ["PSo21UITableViewDataSource", "UITableViewCell"]
 - !private ["PSo21UITableViewDataSource", "emojis"]
 - ["PSo21UITableViewDataSource", "indexPathForPreferredFocusedView"]
 - ["PSo21UITableViewDataSource", "indexPathForPreferredFocusedViewInTableView"]
+- !private ["PSo21UITableViewDataSource", "makeEmojiArray"]
 - ["PSo21UITableViewDataSource", "numberOfSections"]
 - ["PSo21UITableViewDataSource", "numberOfSectionsInTableView"]
 - !private ["PSo21UITableViewDataSource", "performSegue"]
@@ -963,10 +987,12 @@ depends-member:
 - ["PSo21UITableViewDataSource", "viewForZooming"]
 - ["PSo21UITableViewDataSource", "viewForZoomingInScrollView"]
 - ["PSo21UITableViewDataSource", ""]
+- !private ["PSo19UITableViewDelegate", "Emoji"]
 - !private ["PSo19UITableViewDelegate", "UITableViewCell"]
 - !private ["PSo19UITableViewDelegate", "emojis"]
 - ["PSo19UITableViewDelegate", "indexPathForPreferredFocusedView"]
 - ["PSo19UITableViewDelegate", "indexPathForPreferredFocusedViewInTableView"]
+- !private ["PSo19UITableViewDelegate", "makeEmojiArray"]
 - ["PSo19UITableViewDelegate", "numberOfSections"]
 - ["PSo19UITableViewDelegate", "numberOfSectionsInTableView"]
 - !private ["PSo19UITableViewDelegate", "performSegue"]
@@ -988,16 +1014,18 @@ depends-member:
 - ["PSo19UITableViewDelegate", "viewForZooming"]
 - ["PSo19UITableViewDelegate", "viewForZoomingInScrollView"]
 - ["PSo19UITableViewDelegate", ""]
+- !private ["PSo18UITraitEnvironment", "Emoji"]
 - !private ["PSo18UITraitEnvironment", "UITableViewCell"]
 - !private ["PSo18UITraitEnvironment", "dataSource"]
 - !private ["PSo18UITraitEnvironment", "delegate"]
 - !private ["PSo18UITraitEnvironment", "deselectRow"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
-- ["PSo18UITraitEnvironment", "emoji"]
+- !private ["PSo18UITraitEnvironment", "emoji"]
 - ["PSo18UITraitEnvironment", "emojis"]
 - ["PSo18UITraitEnvironment", "indexPathForPreferredFocusedView"]
 - ["PSo18UITraitEnvironment", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "makeEmojiArray"]
 - ["PSo18UITraitEnvironment", "numberOfSections"]
 - ["PSo18UITraitEnvironment", "numberOfSectionsInTableView"]
 - !private ["PSo18UITraitEnvironment", "performSegue"]
@@ -1030,19 +1058,20 @@ depends-member:
 - !private ["CSo6UIView", "text"]
 - !private ["CSo6UIView", "textLabel"]
 - !private ["CSo16UIViewController", "DefinitionViewController"]
+- ["CSo16UIViewController", "Emoji"]
 - ["CSo16UIViewController", "IndexPath"]
 - ["CSo16UIViewController", "Int"]
-- !private ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "UIStoryboardSegue"]
 - ["CSo16UIViewController", "UITableView"]
 - ["CSo16UIViewController", "UITableViewCell"]
 - ["CSo16UIViewController", "deinit"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
-- ["CSo16UIViewController", "emoji"]
+- !private ["CSo16UIViewController", "emoji"]
 - ["CSo16UIViewController", "emojis"]
 - ["CSo16UIViewController", "indexPathForPreferredFocusedView"]
 - ["CSo16UIViewController", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "makeEmojiArray"]
 - ["CSo16UIViewController", "numberOfSections"]
 - ["CSo16UIViewController", "numberOfSectionsInTableView"]
 - !private ["CSo16UIViewController", "performSegue"]
@@ -1067,19 +1096,19 @@ depends-member:
 - ["CSo16UIViewController", "viewForZoomingInScrollView"]
 - ["CSo16UIViewController", ""]
 - !private ["C16Emoji_Dictionary14ViewController", "DefinitionViewController"]
+- ["C16Emoji_Dictionary14ViewController", "Emoji"]
 - ["C16Emoji_Dictionary14ViewController", "IndexPath"]
 - ["C16Emoji_Dictionary14ViewController", "Int"]
-- !private ["C16Emoji_Dictionary14ViewController", "String"]
 - ["C16Emoji_Dictionary14ViewController", "UIStoryboardSegue"]
 - ["C16Emoji_Dictionary14ViewController", "UITableView"]
 - ["C16Emoji_Dictionary14ViewController", "UITableViewCell"]
 - ["C16Emoji_Dictionary14ViewController", "deinit"]
 - ["C16Emoji_Dictionary14ViewController", "didReceiveMemoryWarning"]
-- ["C16Emoji_Dictionary14ViewController", "emoji"]
 - ["C16Emoji_Dictionary14ViewController", "emojis"]
 - ["C16Emoji_Dictionary14ViewController", "indexPathForPreferredFocusedView"]
 - ["C16Emoji_Dictionary14ViewController", "indexPathForPreferredFocusedViewInTableView"]
 - ["C16Emoji_Dictionary14ViewController", "init"]
+- ["C16Emoji_Dictionary14ViewController", "makeEmojiArray"]
 - ["C16Emoji_Dictionary14ViewController", "numberOfSections"]
 - ["C16Emoji_Dictionary14ViewController", "numberOfSectionsInTableView"]
 - !private ["C16Emoji_Dictionary14ViewController", "performSegue"]
@@ -1102,7 +1131,6 @@ depends-member:
 - ["C16Emoji_Dictionary14ViewController", "viewDidLoad"]
 - ["C16Emoji_Dictionary14ViewController", "viewForZooming"]
 - ["C16Emoji_Dictionary14ViewController", "viewForZoomingInScrollView"]
-- ["Ps14_ArrayProtocol", "Element"]
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "IndexDistance"]
 - !private ["Ps14_ArrayProtocol", "SubSequence"]
@@ -1115,21 +1143,21 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "textLabel"]
-- ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
 - !private ["Ps24_DestructorSafeContainer", "_Element"]
 - !private ["Ps24_DestructorSafeContainer", "count"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
-- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "_DisabledRangeIndex"]
-- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
-- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
-- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
-- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "Emoji"]
 - !private ["Ps9_Hashable", "IntegerLiteralType"]
 - !private ["Ps9_Hashable", "Stride"]
 - !private ["Ps9_Hashable", "UITableViewCell"]
@@ -1139,11 +1167,12 @@ depends-member:
 - !private ["Ps9_Hashable", "deselectRow"]
 - !private ["Ps9_Hashable", "destination"]
 - ["Ps9_Hashable", "didReceiveMemoryWarning"]
-- ["Ps9_Hashable", "emoji"]
+- !private ["Ps9_Hashable", "emoji"]
 - ["Ps9_Hashable", "emojis"]
 - ["Ps9_Hashable", "indexPathForPreferredFocusedView"]
 - ["Ps9_Hashable", "indexPathForPreferredFocusedViewInTableView"]
-- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "makeEmojiArray"]
 - ["Ps9_Hashable", "numberOfSections"]
 - ["Ps9_Hashable", "numberOfSectionsInTableView"]
 - !private ["Ps9_Hashable", "performSegue"]
@@ -1179,7 +1208,6 @@ depends-member:
 - !private ["Ps18_IntegerArithmetic", "IntegerLiteralType"]
 - !private ["Ps18_IntegerArithmetic", "Stride"]
 - !private ["Ps18_IntegerArithmetic", "_DisabledRangeIndex"]
-- ["Ps21_ObjectiveCBridgeable", "Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
@@ -1188,7 +1216,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "_DisabledRangeIndex"]
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
-- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "row"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Ps14_SignedInteger", "IntegerLiteralType"]
@@ -1200,67 +1228,68 @@ depends-member:
 depends-nominal:
 - "Ps9AnyObject"
 - "Sa"
-- "Ps23BidirectionalCollection"
-- "Ps22BidirectionalIndexable"
+- !private "Ps23BidirectionalCollection"
+- !private "Ps22BidirectionalIndexable"
 - !private "Vs18BidirectionalSlice"
 - !private "Ps17BitwiseOperations"
 - "Sb"
 - !private "PSo15CALayerDelegate"
 - "Ps7CVarArg"
-- "Ps10Collection"
-- "Ps10Comparable"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
-- "Ps29CustomPlaygroundQuickLookable"
-- "Ps17CustomReflectable"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
 - !private "Vs27DefaultBidirectionalIndices"
 - !private "Vs26DefaultRandomAccessIndices"
 - "C16Emoji_Dictionary24DefinitionViewController"
+- "C16Emoji_Dictionary5Emoji"
 - "Ps9Equatable"
-- "Ps25ExpressibleByArrayLiteral"
-- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
-- "Ps32ExpressibleByStringInterpolation"
-- "Ps26ExpressibleByStringLiteral"
-- "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - "Ps8Hashable"
 - "SQ"
 - "V10Foundation9IndexPath"
-- "Ps9Indexable"
-- "Ps13IndexableBase"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
 - "Si"
 - !private "Ps7Integer"
 - !private "Ps17IntegerArithmetic"
 - !private "Ps16IteratorProtocol"
-- "Ps25LosslessStringConvertible"
-- "Ps10MirrorPath"
-- "Ps17MutableCollection"
-- "Ps16MutableIndexable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- !private "Ps16MutableIndexable"
 - "CSo7NSCoder"
 - "PSo8NSCoding"
-- "PSo9NSCopying"
+- !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
-- "PSo16NSMutableCopying"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- "PSo14NSSecureCoding"
-- "CSo8NSString"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
 - "Sq"
-- "Ps22RandomAccessCollection"
-- "Ps21RandomAccessIndexable"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps21RandomAccessIndexable"
 - !private "Vs17RandomAccessSlice"
-- "Ps26RangeReplaceableCollection"
-- "Ps25RangeReplaceableIndexable"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps25RangeReplaceableIndexable"
 - !private "P10Foundation20ReferenceConvertible"
-- "Ps8Sequence"
+- !private "Ps8Sequence"
 - !private "Ps13SignedInteger"
 - !private "Ps12SignedNumber"
 - !private "Vs5Slice"
 - !private "Ps10Strideable"
 - "SS"
-- "Ps16TextOutputStream"
-- "Ps20TextOutputStreamable"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
@@ -1286,20 +1315,20 @@ depends-nominal:
 - !private "CSo6UIView"
 - "CSo16UIViewController"
 - "C16Emoji_Dictionary14ViewController"
-- "Ps14_ArrayProtocol"
+- !private "Ps14_ArrayProtocol"
 - !private "Ps37_DefaultCustomPlaygroundQuickLookable"
-- "Ps24_DestructorSafeContainer"
-- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
-- "Ps34_ExpressibleByBuiltinStringLiteral"
-- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
-- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
-- "Ps35_HasCustomAnyHashableRepresentation"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
 - !private "Ps14_Incrementable"
 - !private "Ps8_Integer"
 - !private "Ps18_IntegerArithmetic"
-- "Ps21_ObjectiveCBridgeable"
+- !private "Ps21_ObjectiveCBridgeable"
 - !private "Ps14_SignedInteger"
 - !private "Ps11_Strideable"
 depends-dynamic-lookup:
@@ -1314,4 +1343,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "a935906183ca0af55feb01fd7361b2dc"
+interface-hash: "45796e764570fc7db49e74e02e12cd35"
